@@ -1,0 +1,48 @@
+body{
+    background-color: #eee !important;
+}
+.main-board{
+    border: #eefeee solid 1px;
+
+}
+
+.sidebar{
+    position:absolute !important;
+    width: 5rem;
+    height: 100%;
+    display: list-item !important;
+    border: #eed solid 0.1rem;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.side-nav-toggle{
+    width: 100%;
+    border: none;
+    background: inherit;
+    margin-bottom: 1rem;
+}
+
+.al-center{
+    text-align: center;
+}
+
+.side-button {
+    border: #eee solid 5px;
+    border-radius: 0.5rem;
+    background: #eee;
+    height: 3rem;
+
+}
+
+.inside-navbar{
+
+    margin-top:3rem;
+}
+
+.inside-foot-navbar{
+    margin: 0 0.5rem;
+    border: #eee solid 5px;
+    border-radius: 0.5rem;
+    background: #eee;
+    height: auto;
+}
