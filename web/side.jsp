@@ -6,44 +6,50 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<script>
 
-<nav  class="sidebar navbar navbar-light bg-light flex-column align-items-stretch p-3">
-
-
-
-        <button class="side-nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-            </svg>
-        </button>
-    <nav class="nav nav-pills flex-column inside-navbar">
-        <button class='side-nav-toggle side-button '>
-        </button>
-
-        <button class='side-nav-toggle side-button '>
-        </button>
-
-        <button class='side-nav-toggle side-button '>
-        </button>
-
-    </nav>
-
-    <nav class="nav nav-pills flex-column inside-navbar ">
-
-        <div class="inside-foot-navbar">
-            <button class=' side-button '>
-            </button>
-            <button class=' side-button '>
-            </button>
-            <button class=' side-button '>
-            </button>`
+    function test(){
+        document.querySelector('body').classList.toggle('toggle-sidebar');
+    }
 
 
 
 
-        </div>
+</script>
 
-    </nav>
+<aside id="sidebar" class="sidebar">
 
+    <ul class="sidebar-nav" id="sidebar-nav">
 
-</nav>
+        <li class=" nav-item">
+             <span class="bi bi-list toggle-sidebar-btn" onclick="test();" >
+                 <a class="nav-link " href="#">
+                <span>버튼자리</span>
+            </a>
+            </span>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-menu-button-wide"></i><span>부모1</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="#">
+                        <i class="bi bi-circle"></i><span>항목1</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-heading">Pages</li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#">
+                <i class="bi bi-person"></i>
+                <span>메뉴1</span>
+            </a>
+        </li>
+    </ul>
+
+</aside>
